@@ -1,0 +1,115 @@
+@font-face {
+  font-family: 'midnight';
+  src: url('../fonts/blackout_midnight-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/blackout_midnight-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/blackout_midnight-webfont.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/blackout_midnight-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/blackout_midnight-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'sunrise';
+  src: url('../fonts/blackout_sunrise-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/blackout_sunrise-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/blackout_sunrise-webfont.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/blackout_sunrise-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/blackout_sunrise-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'two_am';
+  src: url('../fonts/blackout_two_am-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/blackout_two_am-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/blackout_two_am-webfont.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/blackout_two_am-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/blackout_two_am-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+body{
+    background:	#00B3FF;
+    color:#fff;
+    font-family: Segoe UI, Arial, Helvetica sans-serif;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+h1{
+    font-family: 'midnight', Arial, Helvetica sans-serif;
+    font-size: 3.0em;
+    text-align: center;
+    margin-bottom: 1.2em;
+    line-height: 0.7em;
+}
+
+h1 span{
+    font-family: 'two_am', Arial, Helvetica sans-serif;
+    display: block;
+    font-size: 0.77em;
+    letter-spacing: 0.0em;
+}
+
+#main{
+    line-height: 1.5em;
+    margin: auto auto;
+    padding: 3.0em 1em;
+    max-width: 460px;
+}
+
+#main p{
+    margin: 0 auto 1em auto;  
+    text-align: center;   
+    font-size: 1.1em;
+}
+
+#main ul{
+    margin: 0 auto; 
+    max-width: 290px;
+    list-style: none;
+    font-size: 1.0em;
+}
+
+#main ul li{
+    text-align:center;   
+    margin: 0 0 1em 0;
+    font-size: 1em;
+}
+
+#main ul li a{
+    display:inline-block;
+    font-size: 1.3em;
+}
+
+#main a{
+    padding: 0.3em 0.4em 0.1em 0.4em;
+    font-family: 'midnight', Arial, Helvetica sans-serif;
+}
+
+#main a:link, #main a:visited{
+    color: #FFF;
+}
+
+#main a:hover, #main a:active{
+    color: #00B3FF;
+    background: #fff;
+    text-decoration: none;
+}
+
+#main p.contact{
+    text-align:center;
+    margin:auto;
+}
+
+#content{
+    padding: 0 0 3.0em 0;
+}
+
+@media only screen and (max-width: 330px) {
+    h1{
+        font-size:2.4em;
+    }
+    #main{
+        font-size: 0.9em;
+    }
+}
+
+
