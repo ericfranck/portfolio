@@ -2,7 +2,7 @@ var vph = 0
 
 $(document).ready(function(){
     vph = $(window).height();
-    intro();		
+    //intro();		
 });
 
 function intro(){

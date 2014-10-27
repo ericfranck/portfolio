@@ -1,55 +1,40 @@
-@font-face {
-  font-family: 'midnight';
-  src: url('../fonts/blackout_midnight-webfont.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/blackout_midnight-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/blackout_midnight-webfont.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/blackout_midnight-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/blackout_midnight-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
+@import url(http://fonts.googleapis.com/css?family=Slabo+27px);
 
-@font-face {
-  font-family: 'sunrise';
-  src: url('../fonts/blackout_sunrise-webfont.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/blackout_sunrise-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/blackout_sunrise-webfont.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/blackout_sunrise-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/blackout_sunrise-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
+$bg_color: #00B3FF;
+$content_color: #FFF;
+$dark: #17497a;
 
-@font-face {
-  font-family: 'two_am';
-  src: url('../fonts/blackout_two_am-webfont.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/blackout_two_am-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/blackout_two_am-webfont.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/blackout_two_am-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/blackout_two_am-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+$sp: 20px;
+
+html{
+  background: url('../img/skyline.jpg') no-repeat center center fixed; 
+  background-size: cover;
 }
 
 body{
-    background:	#00B3FF;
-    color:#fff;
-    font-family: Segoe UI, Arial, Helvetica sans-serif;
+    min-height: 100%;
+    color: $content_color;
+    font-family: 'Slabo 27px', serif;
     margin: auto;
     overflow-y: scroll;
 }
 
-h1{
-    font-family: 'midnight', Arial, Helvetica sans-serif;
-    font-size: 3.0em;
-    text-align: center;
-    margin-bottom: 1.2em;
-    line-height: 0.7em;
-    
-    span{
-      font-family: 'two_am', Arial, Helvetica sans-serif;
-      display: block;
-      font-size: 0.77em;
-      letter-spacing: 0.0em;
-    }
-}
-
-h1 span{
-    
+header{
+  text-align: center;
+  border-top: 1px solid $content_color;
+  border-bottom: 1px solid $content_color;
+  font-size: 2em;
+  margin:$sp 0 $sp*2 0 ;
+  padding: $sp 0;
+  h1{
+      font-family: 'Slabo 27px', serif;
+      display: inline-block;
+  }
+  p{
+        font-family: 'Slabo 27px', serif;
+        display: inline-block; 
+        
+      }
 }
 
 #main{
@@ -59,10 +44,10 @@ h1 span{
     max-width: 460px;
 }
 
-#main p{
+#content p{
     margin: 0 auto 1em auto;  
     text-align: center;   
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 #main ul{
@@ -85,16 +70,16 @@ h1 span{
 
 #main a{
     padding: 0.3em 0.4em 0.1em 0.4em;
-    font-family: 'midnight', Arial, Helvetica sans-serif;
+    font-family: 'Slabo 27px', serif;
 }
 
 #main a:link, #main a:visited{
-    color: #FFF;
+    color: $content_color;
 }
 
 #main a:hover, #main a:active{
-    color: #00B3FF;
-    background: #fff;
+    color: $dark;
+    background: $content_color;
     text-decoration: none;
 }
 
