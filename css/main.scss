@@ -1,14 +1,25 @@
 @import url(http://fonts.googleapis.com/css?family=Slabo+27px);
 
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
 $bg_color: #00B3FF;
 $content_color: #FFF;
-$dark: #17497a;
+$dark: #444;
+
+$break-small: 430px;
 
 $sp: 20px;
 
 html{
   background: url('../img/skyline.jpg') no-repeat center center fixed; 
   background-size: cover;
+  background-color: #222;
 }
 
 body{
@@ -19,62 +30,172 @@ body{
     overflow-y: scroll;
 }
 
+hr{
+    clear:both;
+    width:100%;
+}
+
 header{
-  text-align: center;
-  border-top: 1px solid $content_color;
-  border-bottom: 1px solid $content_color;
-  font-size: 2em;
-  margin:$sp 0 $sp*2 0 ;
-  padding: $sp 0;
+  text-align: center;  
+  font-size: 2.5em;
+    max-width: 460px;
+    margin: auto auto;
+  
   h1{
       font-family: 'Slabo 27px', serif;
       display: inline-block;
+      border-top: 1px solid $content_color;
+      border-bottom: 1px solid $content_color;
+      padding: $sp*1.5 0;
   }
   p{
         font-family: 'Slabo 27px', serif;
+        font-size: 0.6em;
         display: inline-block; 
+        margin: $sp*2 0;
+      line-height: $sp*1.5;
+      
         
+        @media screen and (max-width: $break-small) {
+            margin: $sp/2 0 0 0;
       }
+    }
 }
 
 #main{
     line-height: 1.5em;
     margin: auto auto;
-    padding: 3.0em 1em;
-    max-width: 460px;
+    #padding: 0em 1em;
+    max-width: 100%;
 }
 
-#content p{
+#content{
+  background: #fff;
+    color: $dark;
+    #max-width: 960px;
+    margin:auto;
+    padding: $sp;
+    p{
     margin: 0 auto 1em auto;  
     text-align: center;   
-    font-size: 1.3em;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    }  
 }
 
-#main ul{
+#content .content-left, #content .content-right{
+    float: left;
+    max-width: 45%;
+    margin: $sp;
+    display: inline-block;
+    img{
+        max-width: 96%;
+        padding: 2%;
+        border: 1px solid $dark;
+    }
+    p{
+        text-align: left;
+    }
+}
+
+.content-right:after{
+    clear:both;
+}
+
+
+#gallery{
     margin: 0 auto; 
-    max-width: 290px;
     list-style: none;
     font-size: 1.0em;
-}
+    width: 100%;
+    li{
+        
+        text-align:center;   
+        font-size: 1em;
+        float:left;
+        border: 1px solid $content_color;      
+        max-width: 47.5%;   
+        
+        margin-bottom: $sp;
+        position:relative;
+        overflow:hidden;
+        
+        &:nth-child(2n) {
+            float:right;
+          }
+        a{
+            display:inline-block;
+            position:relative;
+            width:100%;
+            font-size: 1.3em;
+            font-family: 'Slabo 27px', serif;
+            span{
+                @include transition(all, 0.5s, ease-in-out);
+                position:absolute;
+                left:0;
+                right:0;
+                top:30%;
+                margin:auto;
+                font-size: 0.8em;
+            }
+            &:hover{
+                img{
+                    opacity: 1;
+                }
+                span{ 
+                    opacity:0;
+                }
+                background: none;
+            }
+            .img-wrap{
+                overflow:hidden;
+                max-height: 130px;
+                width:100%;
+                padding: 0.4em;
+            }
+        }
+        .close{
+            display:none;
+        }
+        
 
-#main ul li{
-    text-align:center;   
-    margin: 0 0 1em 0;
-    font-size: 1em;
-}
+    }
 
-#main ul li a{
-    display:inline-block;
-    font-size: 1.3em;
+    img{
+        @include transition(all, 0.5s, ease-in-out);
+        
+        opacity: 0;
+        background: $dark;
+    }
+    
+    li.active{
+        max-width: 100%;
+        width:100%;
+        min-height: 100%;
+        position:fixed;
+        top: 0;
+        left: 0;
+       background: rgba(49, 44, 44, 0.8);
+        z-index: 1;
+            a img{
+                opacity: 1;
+                max-width: 100%;
+            }
+            .img-wrap{
+                max-height:none;
+            }
+        .close{display:block;}
+            
+    }
+
 }
 
 #main a{
-    padding: 0.3em 0.4em 0.1em 0.4em;
-    font-family: 'Slabo 27px', serif;
+    
 }
 
 #main a:link, #main a:visited{
-    color: $content_color;
+    color: $dark;
 }
 
 #main a:hover, #main a:active{
@@ -86,10 +207,6 @@ header{
 #main p.contact{
     text-align:center;
     margin:auto;
-}
-
-#content{
-    padding: 0 0 3.0em 0;
 }
 
 @media only screen and (max-width: 330px) {
