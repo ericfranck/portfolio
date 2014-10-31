@@ -33,32 +33,82 @@ body{
 hr{
     clear:both;
     width:100%;
+    opacity: 0.6;
+    #margin: $sp*2 0;
+    @media screen and (max-width: 960px) {
+      margin: $sp*3 0;  }
+}
+
+h2{
+    font-size: 2em;
+    margin: $sp 0;
+    padding: $sp 0;
+    text-align: center;
+    border-top: 1px solid $dark;
+      border-bottom: 1px solid $dark;
+    width:auto;
+    clear:both;
+    
+}
+
+h3{
+    font-size: 1.5em;
+    margin: 0 0 $sp 0;
+    line-height:1.4em;
 }
 
 header{
   text-align: center;  
-  font-size: 2.5em;
-    max-width: 460px;
+  font-size: 2.2em;
+    max-width: 480px;
     margin: auto auto;
-  
+    min-height: 400px;
+  #title{
+    margin-top: 200px;
+      line-height: 1.4em;
+  }
+  br{
+      display:none;
+      @media screen and (max-width: 480px) {
+            display:block;
+      }
+  }
   h1{
       font-family: 'Slabo 27px', serif;
       display: inline-block;
       border-top: 1px solid $content_color;
       border-bottom: 1px solid $content_color;
-      padding: $sp*1.5 0;
+      padding: $sp*1 0;
   }
   p{
         font-family: 'Slabo 27px', serif;
         font-size: 0.6em;
         display: inline-block; 
-        margin: $sp*2 0;
+        margin: $sp*2 0 0 0;
       line-height: $sp*1.5;
       
         
         @media screen and (max-width: $break-small) {
-            margin: $sp/2 0 0 0;
+            margin: $sp*2 0 0 0;
+            padding: 0px $sp;
+           
       }
+    }
+}
+
+a#down-arrow{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom : 30px;
+    font-weight: bold;
+    font-size:1em;
+    border:none;
+    text-decoration:none;
+    &:hover{
+        opacity: 0.5;
+        background: none;
+        color:#fff;
     }
 }
 
@@ -67,12 +117,13 @@ header{
     margin: auto auto;
     #padding: 0em 1em;
     max-width: 100%;
+    background: #fff;
 }
 
 #content{
-  background: #fff;
+  
     color: $dark;
-    #max-width: 960px;
+    max-width: 960px;
     margin:auto;
     padding: $sp;
     p{
@@ -85,114 +136,48 @@ header{
 
 #content .content-left, #content .content-right{
     float: left;
-    max-width: 45%;
-    margin: $sp;
+    max-width: 430px;
     display: inline-block;
     img{
         max-width: 96%;
-        padding: 2%;
-        border: 1px solid $dark;
+        cursor: zoom-in;
+        
     }
     p{
         text-align: left;
     }
+    a{
+        
+        &:hover, &:active{
+            background: $dark;
+            color: white;
+        }
+    }
+    @media screen and (max-width: 960px) {
+            float:none;
+            display: block;
+            margin:auto;
+            max-width: 90%;
+            img{
+                
+                display:inherit;
+                margin: $sp*2 auto;
+            }
+      }
+}
+
+.content-left{
+    margin: $sp*2 $sp $sp*2 0;
+}
+
+.content-right{
+    margin: $sp*2 0 $sp*2 $sp;
 }
 
 .content-right:after{
     clear:both;
 }
 
-
-#gallery{
-    margin: 0 auto; 
-    list-style: none;
-    font-size: 1.0em;
-    width: 100%;
-    li{
-        
-        text-align:center;   
-        font-size: 1em;
-        float:left;
-        border: 1px solid $content_color;      
-        max-width: 47.5%;   
-        
-        margin-bottom: $sp;
-        position:relative;
-        overflow:hidden;
-        
-        &:nth-child(2n) {
-            float:right;
-          }
-        a{
-            display:inline-block;
-            position:relative;
-            width:100%;
-            font-size: 1.3em;
-            font-family: 'Slabo 27px', serif;
-            span{
-                @include transition(all, 0.5s, ease-in-out);
-                position:absolute;
-                left:0;
-                right:0;
-                top:30%;
-                margin:auto;
-                font-size: 0.8em;
-            }
-            &:hover{
-                img{
-                    opacity: 1;
-                }
-                span{ 
-                    opacity:0;
-                }
-                background: none;
-            }
-            .img-wrap{
-                overflow:hidden;
-                max-height: 130px;
-                width:100%;
-                padding: 0.4em;
-            }
-        }
-        .close{
-            display:none;
-        }
-        
-
-    }
-
-    img{
-        @include transition(all, 0.5s, ease-in-out);
-        
-        opacity: 0;
-        background: $dark;
-    }
-    
-    li.active{
-        max-width: 100%;
-        width:100%;
-        min-height: 100%;
-        position:fixed;
-        top: 0;
-        left: 0;
-       background: rgba(49, 44, 44, 0.8);
-        z-index: 1;
-            a img{
-                opacity: 1;
-                max-width: 100%;
-            }
-            .img-wrap{
-                max-height:none;
-            }
-        .close{display:block;}
-            
-    }
-
-}
-
-#main a{
-    
-}
 
 #main a:link, #main a:visited{
     color: $dark;
@@ -204,15 +189,36 @@ header{
     text-decoration: none;
 }
 
-#main p.contact{
+a{
+    padding: 2px 4px;
+    color: $content_color;
+    &:hover{
+        background: $content_color;
+        color: $dark;
+    }
+}
+
+#contact{
     text-align:center;
     margin:auto;
+    height: 150px;
+    padding-top: 100px;
+    h2{width:auto;
+        display:inline;
+        border-color: $content_color;
+        padding: $sp/2 0;
+    }
+    p{
+        font-size: 1.6em;
+        line-height: 1.5em;
+        #font-weight: bold;
+     }
+    sub{
+        font-size: 0.8em;
+    }
 }
 
 @media only screen and (max-width: 330px) {
-    h1{
-        font-size:2.4em;
-    }
     #main{
         font-size: 0.9em;
     }

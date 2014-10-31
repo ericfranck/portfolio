@@ -7,8 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/reset.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/fluidbox.css">
         <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="js/custom.js"></script>
+        <script type="text/javascript" src="js/jquery.fluidbox.min.js"></script>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -20,31 +22,46 @@
         </script>
     </head>
     <body>
-        <div id="main">
+        
             <header>
-                 <h1 id="title">Eric Franck&nbsp;&nbsp;{web developer}</h1>
+                 <h1 id="title">&nbsp;Eric Franck&nbsp;<br/>&nbsp;{web developer}&nbsp;</h1>
                 <p>Hi! My name is Eric and I'm a front end web developer and designer in Edmonton, Alberta.</p>
+                <p> <a href="mailto:ericjfranck@gmail.com">Email</a> / <a href="http://lnkd.in/b2gVqiu">LinkedIn</a> / <a href="https://twitter.com/EricJFranck">Twitter</a></p>
+                <a id="down-arrow" href="#">&#9660;</a>
             </header>
+        <div id="main">
         <section id="content">
-        
+           <!--<h2>About Me</h2> 
+            <div class="content-left"><p>I'm a developer/designer hybrid and I write HTML, Sass, javascript, mySQL and PHP. I love to experiment with new technologies</p></div>
+            <div class="content-right"></div>-->
         <h2>Work</h2>
-        
-            <div class="content-left"><img src="img/teamatb.jpg" alt="Team ATB"></div>
-            <div class="content-right"><h3>Team ATB</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</p></div>
+            
+            <div class="content-left"><a href="img/teamatb.jpg"><img src="img/teamatb.jpg" alt="Team ATB"></a></div>
+            <div class="content-right"><h3>Team ATB</h3><p>A responsive website created to hightlight ATB Financial's support of serveral Canadian olympians.  I coded the video backgrounds and implemented the functionality of the navigation and video player with jQuery and custom javascript.</p>
+            <p><a href="http://teamatb.ca">View the live project</a></p>
+            </div>
             <hr>
-                        <div class="content-left"><h3>Team ATB</h3><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</p></div>
-            <div class="content-right"><img src="img/teamatb.jpg" alt="Team ATB"></div>
-        <!--<ul id="gallery">
-            <li ><a href="javascript:void(0)" ><div class="img-wrap"><img src="img/teamatb.jpg" alt="Team ATB"></div><span>Team ATB
-<br>(HTML / CSS / JS, 2014)</span></a><br><a href="javascript:void(0)" class="close">X</a></li>
-            <li><a href="javascript:void(0)"><div class="img-wrap"><img src="img/dunktank.jpg" alt="Dunk Tank"></div><span>Dunk Tank Live Voting
-<br>(HTML / CSS / JS, 2013)</span></a><br><a href="javascript:void(0)" class="close">X</a></li>
-            <li><a href="javascript:void(0)"><div class="img-wrap"><img src="img/teamatb.jpg" alt="Team ATB"><span>Diamond Catcher<br> (Canvas / JS, 2013)</span></div></a><a href="javascript:void(0)" class="close">X</a></li>
-            <li><a href="javascript:void(0)"><div class="img-wrap"><img src="img/eft.jpg" alt="Team ATB"></div><span>EFT Calculator<br> (HTML / CSS / JS, 2012)</span></a><br><a href="javascript:void(0)" class="close">X</a></li>-->
+            <div class="content-left"><h3>Light The Bridge - Find Your Bulb</h3><p>This site was created for Edmonton's Light the Bridge campaign, during which Edmontonians could adopt a light by donating to the city's goal of installing lights on the High Level Bridge.  Find Your Bulb used an accurate scale SVG representation of the High Level Bridge with clickable lights mapped to it showing location of the donor's light.  Donors could search by name or light dedication to find their own lights, or they could explore the bridge by panning and zooming across it to browse thousands of other donor lights and stories. The site was fully responsive and worked on touch devices.</p><p>  I collaborated with ATB Financial's web team to design the user experience and the data architecture, and was responsible for coding the light mapping and interface interaction with javascript, HTML and CSS, while ensuring that the experience worked across devices.</p></div>
+            <div class="content-right"><a href="img/ltb-1.jpg"><img src="img/ltb-1.jpg" alt="Light the Bridge"></a></div>
+            
+            <hr>
+                        <div class="content-left"><a href="img/eft.jpg"><img src="img/eft.jpg" alt="Team ATB"></a></div>
+            <div class="content-right"><h3>Interactive EFT Calculator</h3><p>I created this caclulator for atb.com as part of ATB's Electronic Fund Transfer product launch.  It uses simple interactions and live feedback to show business owners how much money they could save by using EFTs rather than cheques in their day-to-day business. I was responsible for the visual design, user experience, and javascript development. </p>
+            <p><a href="http://www.atb.com/business/business-services/Pages/eft.aspx#eft_calc">View the live project</a></p>
+            </div>
+            
+            <hr>
+                        <div class="content-left"><h3>ATB Financial ABM Screen Redesign</h3><p>The goal of this project was to refresh the look and feel of ATB Financial's ABM machine interface.  I worked with another designer and the ABM vendor to update the graphics and user interface across the software's hundreds of screens.</p> <p> I was responsible for updating the front end HTML, CSS and javascript, as well as the creation of some of the visual elements. </p></div>
+            <div class="content-right"><a href="img/abm.jpg"><img src="img/abm.jpg" alt="Team ATB"></a></div>
+            <hr>
+
         </ul>
-            <p class="contact">Tweet at me: <a href="https://twitter.com/EricJFranck">@ericjfranck</a></p>
-            <p class="contact">Or email me: <a href="mailto:ericjfranck@gmail.com">ericjfranck@gmail.com</a></p>
+            
             </section>
         </div>
+<section id="contact">
+<p> <a href="mailto:ericjfranck@gmail.com">Email</a> / <a href="http://lnkd.in/b2gVqiu">LinkedIn</a> / <a href="https://twitter.com/EricJFranck">Twitter</a></p>
+    <p><sub>&copy;2014 Eric Franck</sub></p>
+    </section>
     </body>
 </html>

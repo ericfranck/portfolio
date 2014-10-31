@@ -5,15 +5,21 @@ $(document).ready(function(){
     vph = $(window).height();
     headheight = $('header').outerHeight();
     console.log(headheight);
-    $('#title').css({
-        marginTop: vph/2-headheight/2
+    
+    $('#content a').fluidbox();
+    
+    $('#down-arrow').click(function(e){
+            $('body, html').animate({scrollTop:$('#content').offset().top - 100 + 'px'}, '700', 'swing');
     });
     
-    $('header, section').css('minHeight', vph);
-    //intro();		
-    $('#gallery li').click(function(){
-        $(this).addClass('active');
+    
+    $('#title').css({
+        marginTop: vph/2-headheight/3
     });
+    
+    $('header').css('minHeight', vph);
+    //intro();		
+
     
     //close modals
     $('.close').click(function(e){
