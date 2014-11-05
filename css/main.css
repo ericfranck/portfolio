@@ -15,7 +15,7 @@ header #title { margin-top: 200px; line-height: 1.4em; }
 header #title br { display: none; }
 @media screen and (max-width: 480px) { header #title br { display: block; } }
 header h1 { font-family: 'Slabo 27px', serif; display: inline-block; border-top: 1px solid white; border-bottom: 1px solid white; padding: 20px 0; }
-header p { font-family: 'Slabo 27px', serif; font-size: 0.6em; display: inline-block; margin: 40px 0 0 0; line-height: 30px; }
+header p { font-family: 'Slabo 27px', serif; font-size: 0.6em; display: inline-block; text-align: justify; margin: 40px 0 0 0; line-height: 30px; }
 @media screen and (max-width: 430px) { header p { margin: 40px 0 0 0; padding: 0px 20px; } }
 @media screen and (max-width: 430px) and (max-width: 480px) { header p br { display: none; } }
 
@@ -30,7 +30,7 @@ header p { font-family: 'Slabo 27px', serif; font-size: 0.6em; display: inline-b
 
 #content .content-left, #content .content-right { float: left; max-width: 430px; display: inline-block; }
 #content .content-left img, #content .content-right img { max-width: 96%; cursor: zoom-in; }
-#content .content-left p, #content .content-right p { text-align: left; }
+#content .content-left p, #content .content-right p { text-align: left; line-height: 1.5em; }
 #content .content-left a:hover, #content .content-left a:active, #content .content-right a:hover, #content .content-right a:active { background: #444444; color: white; }
 @media screen and (max-width: 960px) { #content .content-left, #content .content-right { float: none; display: block; margin: auto; max-width: 90%; }
   #content .content-left img, #content .content-right img { display: inherit; margin: 40px auto; } }

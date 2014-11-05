@@ -85,17 +85,17 @@ header{
         font-family: 'Slabo 27px', serif;
         font-size: 0.6em;
         display: inline-block; 
+      text-align:justify;
         margin: $sp*2 0 0 0;
-      line-height: $sp*1.5;
-      
-        
+        line-height: $sp*1.5;
         @media screen and (max-width: $break-small) {
             margin: $sp*2 0 0 0;
             padding: 0px $sp;
            br{
         @media screen and (max-width: 480px) {
             display:none;
-      }}
+            }
+       }
       }
     }
 }
@@ -155,6 +155,7 @@ header{
     }
     p{
         text-align: left;
+        line-height: 1.5em;
     }
     a{
         
